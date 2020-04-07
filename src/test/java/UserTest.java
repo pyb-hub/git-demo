@@ -37,6 +37,18 @@ public class UserTest {
 
     }
     @Test
+    public void testFindAll1(){
+
+        /*获取bean中的userService对象，也可以在上面自动获取*/
+        /*ApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+        IUserService us = ac.getBean("userService", IUserService.class);*/
+        List<User> users = us.findAll();
+        for (User u : users) {
+            System.out.println(u);
+        }
+
+    }
+    @Test
     public void testInsert(){
 
          User user = new User();
